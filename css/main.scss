@@ -8,30 +8,21 @@ $grey-dark: #4A4A4A;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-body{
-  background-color: $grey-light;
-  width: 100%;
-}
-section{
-  width: 80%;
-  margin: 10% auto;
-  @media (max-width: 700px){
-    width: 100%;
-  }
-}
-
-.fix{
-  clear: both;
-}
 .btn {
   padding: 15px 50px;
   border-radius: 5%;
   font-size: 0.95em;
   text-decoration: none;
+  width: max-content;
+  &.btn-green{
+    color: white;
+    background-color: $green;
+  }
 }
-.btn-green{
-  color: white;
-  background-color: $green;
+
+body{
+  background-color: $grey-light;
+  width: 100%;
 }
 
 .site-header{
@@ -46,36 +37,62 @@ section{
     }
   }
 }
-.box{
-  width: 28%;
-  background-color: white;
-  float: left;
-  margin: 10px 20px;
-  @media (max-width: 1000px){
-    width: 42%;
-  }
+
+.box-section{
+  width: 80%;
+  margin: 10% auto;
   @media (max-width: 700px){
-    width: 90%;
-    margin: 0 5% 5%;
-  }
-  img{
     width: 100%;
-    height: auto;
   }
-  .box-title{
-    color: $grey-dark;
-    font-size: 0.95em;
-    padding: 15px;
+  .box-container{
+    width: 100%;
+    overflow: auto;
+    .box{
+      width: 30%;
+      background-color: white;
+      float: left;
+      margin: 0 2.5%;
+      &:first-child{margin-left: 0;}
+      &:last-child{margin-right: 0;}
+      @media (max-width: 825px){
+        width: 50%;
+        margin: 0 0 5% 0;
+      }
+      @media (max-width: 700px){
+        width: 90%;
+        margin: 0 5% 5%;
+        &:first-child{margin-left: 5%;}
+        &:last-child{margin-right: 5%;}
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+      .box-title{
+        color: $grey-dark;
+        font-size: 0.95em;
+        margin: 3%;
+      }
+      .box-description{
+        color: $grey-lightdark;
+        font-size: 0.85em;
+        margin: 0 3% 10px;
+      }
+      .see-more{
+        color: $green;
+        text-decoration: none;
+        font-size: 0.7em;
+        margin: 0 0 3% 3%;
+        display: block;
+      }
+    }
   }
-  .box-description{
-    color: $grey-lightdark;
-    font-size: 0.85em;
-    padding: 0 15px 10px;
-  }
-  .see-more{
-    color: $green;
-    text-decoration: none;
-    font-size: 0.7em;
-    padding-left: 15px;
+  .more-document{
+    clear: both;
+    margin-top: 5%;
+    a{
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
